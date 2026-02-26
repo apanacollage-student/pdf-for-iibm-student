@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payment Successful</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:"Segoe UI",Arial,sans-serif}
+
+body{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+      radial-gradient(circle at top, #00ffd5, transparent 60%),
+      radial-gradient(circle at bottom, #6a00ff, transparent 60%),
+      #050010;
+    color:#fff;
+    overflow:hidden;
+}
+
+/* floating glow */
+.glow{
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:#00ffd5;
+    filter:blur(120px);
+    opacity:.25;
+    animation:move 10s infinite alternate ease-in-out;
+}
+@keyframes move{
+    from{transform:translate(-100px,-50px)}
+    to{transform:translate(100px,80px)}
+}
+
+/* card */
+.card{
+    width:92%;
+    max-width:420px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(14px);
+    border-radius:22px;
+    padding:28px;
+    text-align:center;
+    box-shadow:0 30px 80px rgba(0,0,0,.7);
+    position:relative;
+    z-index:2;
+}
+
+/* tick animation */
+.check{
+    width:80px;
+    height:80px;
+    margin:0 auto 10px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#00ff99,#00d4ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    color:#022;
+    box-shadow:0 0 25px #00ffcc;
+}
+
+h1{
+    margin:10px 0 5px;
+    font-size:26px;
+    letter-spacing:.5px;
+}
+.sub{
+    font-size:14px;
+    opacity:.85;
+    margin-bottom:18px;
+}
+
+/* receipt */
+.receipt{
+    text-align:left;
+    background:rgba(0,0,0,.45);
+    padding:18px;
+    border-radius:16px;
+    font-size:14px;
+}
+.receipt div{
+    display:flex;
+    justify-content:space-between;
+    margin:6px 0;
+}
+.receipt span{
+    opacity:.8;
+}
+
+/* buttons */
+button{
+    width:100%;
+    padding:13px;
+    margin-top:14px;
+    border:none;
+    border-radius:14px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+.home{
+    background:linear-gradient(135deg,#00ffd5,#00aaff);
+    color:#022;
+}
+.home:hover{opacity:.9}
+
+.note{
+    font-size:12px;
+    opacity:.6;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+
+<div class="card">
+
+    <div class="check">✔</div>
+
+    <h1>Payment Successful</h1>
+    <div class="sub">Thank you for supporting the creator 💚</div>
+
+    <div class="receipt">
+        <div><span>Status</span><b>Success</b></div>
+        <div><span>Amount</span><b>₹ <span id="amt">0</span></b></div>
+        <div><span>Transaction ID</span><b id="txn">---</b></div>
+        <div><span>Date & Time</span><b id="time">---</b></div>
+        <div><span>Paid To</span><b>Ayush</b></div>
+        <div><span>Method</span><b>UPI</b></div>
+    </div>
+
+    <button class="home" onclick="goHome()">Back to Home</button>
+
+    <div class="note">
+        This is a demo receipt generated for learning / portfolio purpose.
+    </div>
+
+</div>
+
+<script>
+document.getElementById("amt").innerText =
+  localStorage.getItem("donationAmount") || "0";
+
+document.getElementById("txn").innerText =
+  localStorage.getItem("donationTxn") || ("TXN"+Math.floor(Math.random()*10000000));
+
+document.getElementById("time").innerText =
+  localStorage.getItem("donationTime") || new Date().toLocaleString();
+
+function goHome(){
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

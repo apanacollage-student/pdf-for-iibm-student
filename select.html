@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select-semester</title>
+ <!-- ⭐ LOGIN PROTECTION -->
+    <script>
+        if (localStorage.getItem("loggedIn") !== "true") {
+            window.location.href = "index.html";  // login page redirect
+        }
+    </script>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            background-image: url("https://www.isbr.in/blogs/wp-content/uploads/2023/05/BCA-Admission.jpg");
+            background-size: cover;
+            color: rgb(114, 209, 13);
+            
+            
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            padding: 30px;
+            border-radius: 10PX;
+
+        }
+
+        .sem1 {
+           
+            padding: 40px;
+            color: rgb(5, 146, 165);
+            border-radius: 10px;
+            font-weight: 800;
+            text-decoration: none;
+            background-color: rgb(0, 0, 0);
+            transition: 0.4s ease;
+            transform: translateY(0)
+            
+
+        }
+ /*chatgpt******/
+        .sem1:hover {
+            box-shadow: 0 0 20px #c91b07, 0 0 40px #86d30a, 0 0 60px #0aacd4;
+            transform: scale(1.05);
+            transition: 0.4s;
+             animation: shake 0.3s linear;
+             
+        }
+        
+ 
+    </style>
+</head>
+
+<body>
+    <h1>SELECT YOUR SEMESTER</h1>
+    <div id="grid">
+        <a class="sem1" href="FIRSTSEM.html">FIRST-SEMESTER</a>
+        <a class="sem1" href="SEM2.html">SECOUND-SEMESTER</a>
+        <a class="sem1" href="sem3.html">THIRD-SEMESTER</a>
+        <a class="sem1" href="sem4.html">FORTH-SEMESTER</a>
+        <a class="sem1" href="sem5.html">FIFTH-SEMESTER</a>
+        <a class="sem1" href="sem6.html">SIX-SEMESTER</a>
+
+
+    </div>
+    <script>
+        //user ke baare me jaanan
+let users = JSON.parse(localStorage.getItem("users")) || [];
+console.log("Registered Users:", users);
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASIC-ENGLISH</title>
+    <!-- ⭐ LOGIN PROTECTION -->
+    <script>
+        if (localStorage.getItem("loggedIn") !== "true") {
+            window.location.href = "index.html";  // login page redirect
+        }
+    </script>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+ <!-- LOGIN PROTECTION -->
+    <script>
+        if (localStorage.getItem("loggedIn") !== "true") {
+            window.location.href = "index.html";
+        }
+    </script>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Poppins, sans-serif;
+            background: url("https://png.pngtree.com/background/20230416/original/pngtree-ai-robot-innovation-high-tech-ppt-robot-template-background-image-picture-image_2443210.jpg") no-repeat center center/cover;
+            color: #fff;
+        }
+
+        /* Dark overlay for readability */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: -1;
+        }
+
+        /* Home Button */
+        #home1 {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+
+        .home {
+            padding: 12px 30px;
+            background: #00eaff;
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 0 15px #00eaff;
+            transition: 0.3s;
+        }
+
+        .home:hover {
+            background: #a60739;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Main container */
+        .container {
+            max-width: 1200px;
+            margin: 100px auto 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(0, 234, 255, 0.3);
+        }
+
+        /* Headings */
+        .pmo {
+            text-align: center;
+            background: linear-gradient(45deg, #00eaff, #007bff);
+            padding: 25px;
+            border-radius: 12px;
+            color: #000;
+        }
+
+        .unit1 {
+            margin: 30px auto 15px;
+            padding: 10px 25px;
+            width: fit-content;
+            border-radius: 20px;
+            background: #9bc4ce;
+            color: #5a0060;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* iframe */
+        iframe {
+            width: 100%;
+            height: 700px;
+            border-radius: 12px;
+            border: 2px solid #00eaff;
+            box-shadow: 0 0 20px rgba(0, 234, 255, 0.6);
+            margin-top: 15px;
+        }
+
+        /* Download button */
+        #btn {
+            display: block;
+            margin: 25px auto;
+            padding: 14px 35px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            background: linear-gradient(45deg, #007bff, #00eaff);
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        #btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00eaff;
+        }
+
+        hr {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin: 40px 0;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            iframe {
+                height: 500px;
+            }
+
+            .home {
+                font-size: 16px;
+                padding: 10px 22px;
+            }
+        }
+    </style>
+<body>
+
+
+    <div class="container">
+        <!-- Navigation -->
+        <div id="home1">
+            <a class="home" href="FIRSTSEM.html">home</a>
+
+        </div>
+
+        <h1 class="unit1">AGENDA-LATTER</h1>
+
+        <iframe id="if" style="transform: scale(1);"
+            src="https://drive.google.com/file/d/1Dwyne_5AvuKhYqXpfTB_OGXA5cZA6Pkc/preview" class="pdf"></iframe>
+
+        <!-- Download button -->
+        <a href="https://drive.google.com/file/d/1Dwyne_5AvuKhYqXpfTB_OGXA5cZA6Pkc/preview"
+            download="https://drive.google.com/file/d/1Dwyne_5AvuKhYqXpfTB_OGXA5cZA6Pkc/preview">
+            <button id="btn">Download PDF</button>
+        </a>
+        <HR>
+        <BR>
+        <BR>
+
+        <!-- SECOUND -->
+
+
+        <h1 class="unit1">MEMO-NOTES</h1>
+
+        <iframe id="if" style="transform: scale(1);"
+            src="https://drive.google.com/file/d/17uwcx_M46LnYN2W_KBbx40EH-qGGiX0z/preview" class="pdf"></iframe>
+
+        <!-- Download button -->
+        <a href="https://drive.google.com/file/d/17uwcx_M46LnYN2W_KBbx40EH-qGGiX0z/preview"
+            download="https://drive.google.com/file/d/17uwcx_M46LnYN2W_KBbx40EH-qGGiX0z/preview">
+            <button id="btn">Download PDF</button>
+        </a>
+        <HR>
+        <!-- THIRD -->
+
+
+        <h1 class="unit1">SALES_LATTER-NOTES</h1>
+
+        <iframe id="if" style="transform: scale(1);"
+            src="https://drive.google.com/file/d/1ANkm9n7MaNjr3iS0V2uWbU4x6Nyo77px/preview" class="pdf"></iframe>
+
+        <!-- Download button -->
+        <a href="https://drive.google.com/file/d/1ANkm9n7MaNjr3iS0V2uWbU4x6Nyo77px/preview"
+            download="https://drive.google.com/file/d/1ANkm9n7MaNjr3iS0V2uWbU4x6Nyo77px/preview">
+            <button id="btn">Download PDF</button>
+        </a>
+        <HR>
+        <!-- FOUR -->
+
+
+        <h1 class="unit1">INQUIRY_LATTER-NOTES</h1>
+
+        <iframe id="if" style="transform: scale(1);"
+            src="https://drive.google.com/file/d/1KzVsEu5q0H99MQsl8yg-ihaijuPyKVwl/preview" class="pdf"></iframe>
+
+        <!-- Download button -->
+        <a href="https://drive.google.com/file/d/1KzVsEu5q0H99MQsl8yg-ihaijuPyKVwl/preview"
+            download="https://drive.google.com/file/d/1KzVsEu5q0H99MQsl8yg-ihaijuPyKVwl/preview">
+            <button id="btn">Download PDF</button>
+        </a>
+        <HR>
+        <!-- FIVE -->
+
+
+        <h1 class="unit1">MINUTES_OF.MEETING-NOTES</h1>
+
+        <iframe id="if" style="transform: scale(1);"
+            src="https://drive.google.com/file/d/1-Knv-rJXfo_CbIDYtlPXEM-_YxVXkw4i/preview" class="pdf"></iframe>
+
+        <!-- Download button -->
+        <a href="https://drive.google.com/file/d/1-Knv-rJXfo_CbIDYtlPXEM-_YxVXkw4i/preview"
+            download="https://drive.google.com/file/d/1-Knv-rJXfo_CbIDYtlPXEM-_YxVXkw4i/preview">
+            <button id="btn">Download PDF</button>
+        </a>
+        <HR>
+        <!-- SIX -->
+
+
+        <h1 class="unit1">PRPPOSAL_LATTER-NOTES</h1>
+
+        <iframe id="if" style="transform: scale(1);"
+            src="https://drive.google.com/file/d/14DHg7NQiyiQTKC__VrohcFZTZZIdsVJg//preview" class="pdf"></iframe>
+
+        <!-- Download button -->
+        <a href="https://drive.google.com/file/d/14DHg7NQiyiQTKC__VrohcFZTZZIdsVJg//preview"
+            download="https://drive.google.com/file/d/14DHg7NQiyiQTKC__VrohcFZTZZIdsVJg//preview">
+            <button id="btn">Download PDF</button>
+        </a>
+        <HR>
+        <!-- SEVEN -->
+
+
+        <h1 class="unit1">RUITINE_LATTER-NOTES</h1>
+
+        <iframe id="if" style="transform: scale(1);"
+            src="https://drive.google.com/file/d/13ldEDPns1aaCoYL1yrwE1S9czpKP4pmf/preview" class="pdf"></iframe>
+
+        <!-- Download button -->
+        <a href="https://drive.google.com/file/d/13ldEDPns1aaCoYL1yrwE1S9czpKP4pmf/preview"
+            download="https://drive.google.com/file/d/13ldEDPns1aaCoYL1yrwE1S9czpKP4pmf/preview">
+            <button id="btn">Download PDF</button>
+        </a>
+
+    </div>
+     
+</body>
+
+</html>
