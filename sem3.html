@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>THIRD-SEMESTER</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #000;
+        font-family: Poppins, sans-serif;
+    }
+
+    /* MAIN TEXT */
+    .coming {
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+        color: #00eaff;
+        text-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
+        animation: glow 2s infinite alternate ease-in-out;
+        z-index: 10;
+    }
+
+    @keyframes glow {
+        0% { text-shadow: 0 0 20px #00eaff; transform: scale(1); }
+        100% { text-shadow: 0 0 60px #00ffff; transform: scale(1.05); }
+    }
+
+    /* FLOATING TAGS */
+    .tag {
+        position: absolute;
+        font-size: 25px;
+        color: #0ff;
+        opacity: 0.4;
+        animation: floatUp 8s linear infinite;
+        z-index: 3;
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(100vh); opacity: .2; }
+        100% { transform: translateY(-10vh); opacity: 1; }
+    }
+
+    canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+</style>
+</head>
+<body>
+    <!--* DIV OF SECTION**-->
+     <!-- DIV 
+ <h1 id="welcome"></h1>
+    <p class="subtitle">Student Learning Resource NOTES Website</p>
+
+    <div id="ca">
+
+        <div class="ba">
+            <a href="" target="_blank">
+                <img class="p"
+                    src="">
+                <h2 id="text"></h2>
+            </a>
+        </div>
+
+        <div class="ba">
+            <a href="" target="_blank">
+                <img class="p"
+                    src="">
+                <h2 id="text"></h2>
+            </a>
+        </div>
+
+        <div class="ba">
+            <a href="" target="_blank">
+                <img class="p" src="">
+                <h2 id="text"></h2>
+            </a>
+        </div>
+        <div class="ba">
+            <a href="" target="_blank">
+                <img class="p" src="">
+                <h2 id="text"></h2>
+            </a>
+        </div>
+        <div class="ba">
+            <a href="" target="_blank">
+                <img class="p"
+                    src="">
+                <h2 id="text"></h2>
+            </a>
+        </div>
+
+        <div class="ba">
+            <a href="" target="_blank">
+                <img class="p"
+                    src="">
+                <h2 id="text"></h2>
+            </a>
+        </div>
+        <div class="ba">
+            <a href="L" target="_blank">
+                <img class="p"
+                    src="">
+                <h2 id="text"></h2>
+            </a>
+        </div>
+        <div class="ba">
+            <a href="" target="_blank">
+                <img class="p"
+                    src="">
+                <h2 id="text"></h2>
+            </a></div>
+        <div class="ba">
+            <a href="" target="_blank">
+                <img class="p"
+                    src="">
+                <h2 id="text">r</h2>
+            </a></div>-->
+
+<h1 class="coming">2nd Semester Coming Soon...</h1>
+
+<!-- Floating coding tags -->
+<div class="tag" style="left:10%;">&lt;html&gt;</div>
+<div class="tag" style="left:30%; animation-delay:1s;">&lt;/body&gt;</div>
+<div class="tag" style="left:60%; animation-delay:2s;">function()</div>
+<div class="tag" style="left:80%; animation-delay:3s;">{ }</div>
+<div class="tag" style="left:50%; animation-delay:4s;">AYUSH YADAV</div>
+<div class="tag" style="left:50%; animation: delay 3pxs;">AYUSH YADAV</div>
+<div class="tag" style="left:50%; animation-delay:8ms;">AYUSH YADAV</div>
+<div class="tag" style="left:50%; animation-delay:5ms;">AYUSH YADAV</div>
+
+
+<!-- MATRIX CODING RAIN -->
+<canvas id="matrix"></canvas>
+
+<script>
+/* MATRIX RAIN BACKGROUND */
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+const letters = "AYUSH YADAV ";
+const fontSize = 18;
+const columns = canvas.width / fontSize;
+
+const rain = [];
+for (let i = 0; i < columns; i++) {
+    rain[i] = 1;
+}
+
+function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#00eaff";
+    ctx.font = fontSize + "px monospace";
+
+    for (let i = 0; i < rain.length; i++) {
+        const text = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillText(text, i * fontSize, rain[i] * fontSize);
+
+        if (rain[i] * fontSize > canvas.height && Math.random() > 0.95) {
+            rain[i] = 0;
+        }
+        rain[i]++;
+    }
+}
+
+setInterval(draw, 45);
+</script>
+
+</body>
+</html>

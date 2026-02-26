@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML | CSS | JS – Notes</title>
+
+    <!-- LOGIN PROTECTION -->
+    <script>
+        if (localStorage.getItem("loggedIn") !== "true") {
+            window.location.href = "index.html";
+        }
+    </script>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Poppins, sans-serif;
+            background: url("https://images.wallpapersden.com/image/download/programming-coding-language_bGhpbm6UmZqaraWkpJRmbmdlrWZlbWU.jpg") no-repeat center/cover;
+            color: #fff;
+        }
+
+        /* Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: -1;
+        }
+
+        /* Home button */
+        #home1 {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+
+        .home {
+            padding: 12px 28px;
+            background: #00eaff;
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 0 15px #00eaff;
+            transition: 0.3s;
+        }
+
+        .home:hover {
+            background: #a60739;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 100px auto 50px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(0, 234, 255, 0.3);
+        }
+
+        /* Section title */
+        .unit {
+            margin: 35px auto 15px;
+            padding: 10px 28px;
+            width: fit-content;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #00eaff, #007bff);
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* iframe */
+        iframe {
+            width: 100%;
+            height: 700px;
+            border-radius: 14px;
+            border: 2px solid #00eaff;
+            box-shadow: 0 0 20px rgba(0, 234, 255, 0.6);
+            margin-top: 15px;
+        }
+
+        /* Download button */
+        .btn {
+            display: block;
+            margin: 25px auto;
+            padding: 14px 36px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            background: linear-gradient(45deg, #007bff, #00eaff);
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00eaff;
+        }
+
+        hr {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin: 45px 0;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            iframe {
+                height: 500px;
+            }
+
+            .home {
+                font-size: 16px;
+                padding: 10px 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Home -->
+    <div id="home1">
+        <a class="home" href="FIRSTSEM.html">HOME</a>
+    </div>
+
+    <div class="container">
+
+        <!-- HTML THEORY -->
+        <h1 class="unit">HTML THEORY</h1>
+        <iframe src="https://drive.google.com/file/d/1jStvQPVnIA3kj9m5yz_6H3NEUTK9ldv_/preview"></iframe>
+        <a href="https://drive.google.com/uc?export=download&id=1jStvQPVnIA3kj9m5yz_6H3NEUTK9ldv_">
+            <button class="btn">DOWNLOAD PDF</button>
+        </a>
+
+        <hr>
+
+        <!-- HANDWRITTEN NOTES -->
+        <h1 class="unit">HAND WRITTEN NOTES</h1>
+        <iframe src="https://drive.google.com/file/d/1iCgSOHhRZm-9PheoAXR-kiTGLXTlh2qb/preview"></iframe>
+        <a href="https://drive.google.com/uc?export=download&id=1iCgSOHhRZm-9PheoAXR-kiTGLXTlh2qb">
+            <button class="btn">DOWNLOAD PDF</button>
+        </a>
+
+        <hr>
+
+        <!-- CSS ONE SHOT -->
+        <h1 class="unit">CSS – ONE SHOT</h1>
+        <iframe src=""></iframe>
+        <button class="btn" disabled>PDF COMING SOON</button>
+
+    </div>
+
+</body>
+</html>
